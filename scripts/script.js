@@ -243,7 +243,7 @@ $(document).ready(function(){
 
 		if(timeAfterDay < dayLength){                
 			titleArraySelection = ["Happy Birthday Daisy!", "You are totally awesome!", "Have a super Daisy day!!!"];
-		}else if(timeAfterDay > dayLength && timeAfterDay * 0.9 < dayLength * 2){
+		}else if(timeAfterDay > dayLength * 0.9 && timeAfterDay < dayLength * 2){
 			titleArraySelection = ["Hope your Birthday was awesome Daisy!", "Just like you!"];
 		}
 
