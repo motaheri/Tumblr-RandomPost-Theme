@@ -164,21 +164,18 @@ $(document).ready(function(){
 	};
 
 	function afterType(){ 
-		$("#message .message-text").css('display','inline');
-		setTimeout(function() {
-			$("#message .message-text").css('display','inline');
-		}, .1);
+		$('html').css('cursor','pointer');
 		randomImage();
-		//console.log("Callback"); 
-		$('html').click(function(){
-			randomImage();
-			$('html').css('cursor','pointer');
+		//console.log("Callback");
+		$("html, body").on("tap",function(){
+		  	randomImage();
 			return false;
 		});
 	}
 	
 	//dynamic stack of posts
 	var titleArrayUnique = titleArray;
+	
 	
 	$('.button').click(function(){
 		$('.button').hide();
