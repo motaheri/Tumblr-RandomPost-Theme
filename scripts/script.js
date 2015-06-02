@@ -1,3 +1,17 @@
+// init bunch of sounds
+ion.sound({
+    sounds: [
+        {name: "blop"}
+    ],
+
+    // main config
+    path: "https://rawgit.com/motaheri/IsItDaisyDay/master/sounds/",
+    preload: true,
+    multiplay: true,
+    volume: 0.1
+});
+
+
 /**https://radu.cotescu.com/javascript-diff-function/
 * Function which returns the result of the subtraction method applied to
 * sets (mathematical concept).
@@ -70,9 +84,12 @@ function randomImage() {
   //$('#randImageHolder').css('background','url(' + randomPhoto + ')');
   //$('#randImageHolder').fadeIn('fast');
   var appendImgHtml = '<div class="randImageContainer" style="height:' + imageSizeH + 'px; width:' + imageSizeW + 'px; top:' + imagePosY + 'px; left:' + imagePosX + 'px; background: url(' + randomPhoto + ')"/>';
-  $('#popAudio').prop("volume",0.1);
-  $('#popAudio')[0].play();
-  $('#randImageHolder').append(appendImgHtml);
+  //$('#popAudio').prop("volume",0.1);
+  //$('#popAudio')[0].play();
+  //$('#randImageHolder').append(appendImgHtml);
+  
+// play sound
+ion.sound.play("blop");
 };
 
 // tumblr json retrieval written by Mohammad Taheri http://motaheri.com/
