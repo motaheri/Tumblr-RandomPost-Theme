@@ -1,52 +1,60 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml"> 
 <head> 
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
-<!-- /************/ -->
-<title>{Title}</title> 
-<style type="text/css"> 
-	{CustomCSS}
-</style> 
-<!--[if lt IE 8]>
-    <style type="text/css">
-    #message-container {top:50%}
-    #message{top:-50%;}
-    </style>
-<![endif]-->
-<!--[if IE 7]>
-    <style type="text/css">
-    #wrapper{
-    position:relative;
-    overflow:hidden;
-    }
-    </style>
-<![endif]-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,600,400' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="{Favicon}" /> 
-<link rel="alternate" type="application/rss+xml" href="{RSS}" />
-<link rel="apple-touch-icon" href="{PortraitURL-128}" /> 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-	<script type="text/javascript" src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/scripts/typed.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+	<!-- /************/ -->
+	<title>{Title}</title> 
+	<link rel="stylesheet" href="https://rawgit.com/motaheri/IsItDaisyDay/master/style/reset.css">
+	<link rel="stylesheet" href="style/style.css">
+	<style type="text/css"> 
+		{CustomCSS}
+	</style> 
+	<!--[if lt IE 8]>
+		<style type="text/css">
+		#message-container {top:50%}
+		#message{top:-50%;}
+		</style>
+	<![endif]-->
+	<!--[if IE 7]>
+		<style type="text/css">
+		#wrapper{
+		position:relative;
+		overflow:hidden;
+		}
+		</style>
+	<![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Slabo+27px|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" href="{Favicon}" /> 
+	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+	<link rel="apple-touch-icon" href="{PortraitURL-128}" /> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/typed.js"></script>
 	<script type="text/javascript" src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/scripts/jquery.cookie.js"></script>
-	<script type="text/javascript" src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/scripts/script.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
 </head> 
-<body> 
+<body>
+<audio id="popAudio">
+    <source src="sounds/blop.mp3" type="audio/mpeg">
+</audio>
 <div id="wrapper"> 
 	<div id="center">
-		<div id="question">
-			{Title}
+		<div id="question" ref="{Title}">
+			 Is It Daisy Day?
 		</div>
 	</div>
 	<div id="outer">
 		<div id="message-container"> 
-		<span class="button" style="display:none">Calculate!</span>
-			<div id="hour-glass" style="display:none">
+			<span class="button">Calculate!</span>
+			<div id="hour-glass">
 				<img src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/icons/hourglass.gif?raw=true"/>
 			</div>
-			<div id="message" style="display:none"><a href="#">{block:Posts}{block:Text}{Title}{/block:Text}{/block:Posts}</a></div> 
+			<div id="message">
+				<a href="#">{block:Posts}{block:Text}{Title}{/block:Text}{/block:Posts}</a>
+			</div>
 		</div> 
 	</div> 
 </div>
+<div id="randImageHolder">&nbsp;</div>
 </body> 
 </html> 

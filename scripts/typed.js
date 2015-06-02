@@ -20,9 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-
-
-
 ! function($) {
 
     "use strict";
@@ -221,8 +218,29 @@
                                 self.el.val(nextString);
                             } else if (self.contentType === 'html') {
                                 self.el.html(nextString);
+								
+								// fix for when the some text is invisible when the browser edge is reached
+								$('.typed-cursor').hide();
+								
+								self.el.css('display','block')
+									
+								setTimeout(function() {
+									self.el.css('display','inline');
+									$('.typed-cursor').show();
+								}, .1);
+
                             } else {
                                 self.el.text(nextString);
+								
+								// fix for when the some text is invisible when the browser edge is reached
+								$('.typed-cursor').hide();
+								self.el.css('display','block')
+									
+								setTimeout(function() {
+								
+									self.el.css('display','inline');
+									$('.typed-cursor').show();
+								}, .1);
                             }
                         }
 
