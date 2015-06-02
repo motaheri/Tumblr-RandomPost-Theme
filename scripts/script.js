@@ -18,7 +18,7 @@ ion.sound({
 *
 * @param a Array one
 * @param b Array two
-* @return An array containing the result
+* @return An array containing the result  a-b
 */
 function diffArray(a, b) {
 	var seen = [], diff = [];
@@ -183,17 +183,18 @@ $(document).ready(function(){
 	$('.button').click(function(){
 		$('.button').hide();
 		$('#hour-glass').fadeIn(300);
-		var titleArraySelection = $.cookie('titleArrayUniqueStored');
-		if (typeof titleArraySelection !== 'undefined') {
-			titleArraySelection = titleArraySelection.split('|');
+		var titleArraySelectionPrevious = $.cookie('titleArraySelectionStored');
+		if (typeof titleArraySelectionPrevious !== 'undefined') {
+			titleArraySelectionPrevious = titleArraySelectionPrevious.split('|');
 		}else{
-			titleArraySelection = [];
+			titleArraySelectionPrevious = [];
 		}
+		titleArraySelection = [];
 		//console.log('titleArraySelection');
 		//console.log(titleArraySelection);
 		
 		//Lets get posts that are unique
-		
+		titleArrayUnique = diffArray(titleArrayUnique,titleArraySelectionPrevious);
 		// If less than two posts we need to get the single post and then add all the post back in the stack
 		if (titleArrayUnique.length < 2){
 			//get last remaining post 
@@ -216,7 +217,7 @@ $(document).ready(function(){
 		}
 		
 		
-		$.cookie("titleArrayUniqueStored", titleArrayUnique.join('|'), {
+		$.cookie("titleArraySelectionStored", titleArraySelection.join('|'), {
 				expires: 1000
 		});
 		
