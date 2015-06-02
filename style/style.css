@@ -1,0 +1,144 @@
+/*
+* Y! CSS Reset http://developer.yahoo.com/yui/reset/
+*/
+	html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
+    html, body {
+	height: 100%;
+	overflow: hidden;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+    }
+    
+    #wrapper {
+        height: 100%;
+        width: 100%;
+        display: table;
+        vertical-align: middle;
+		xborder:1px solid red;
+    }
+    
+    #outer {
+        display: table-cell;
+        vertical-align: middle;
+		xborder:1px solid red;
+    }
+    #center{
+		display:block;
+		width:100%;
+		height:200px;
+		position: fixed;
+		text-align:center;
+	}
+	#question{
+		position: relative;
+		height: 150px;
+		width:auto;
+		font-size: 13vw;
+		margin-top: 4vh;
+	}
+	
+    #message-container {
+        position: relative;
+        left: 50%;
+        float: left;
+		xborder:1px solid red;
+    }
+    
+    #message,#hour-glass {
+        padding: 20px 20px;
+        position: relative;
+        text-align: center;
+        left: -50%;
+		font-size: 900%;
+    }    
+    a, a:hover {
+        color: #000;
+        text-decoration: none;
+		noFocusLine: expression(this.onFocus=this.blur()); /* remove unwanted focus outlines from links */
+		outline: none;
+    }
+	::selection	 { 
+		background: transparent; /* Safari and Opera */
+	}
+	::-moz-selection  { 
+		background: transparent; /* Firefox */
+	}
+    iframe {
+        display: none;
+    }
+	/* main button block */
+	.button {
+		display:inline-block;
+		background: #fff;
+		position: relative;
+		line-height: 100px;
+		text-align: center;
+		padding: 0 20px;
+		border: 5px solid #000;
+		height: 100px;
+		margin-left: 0.5em;
+		font-size: 70px;
+		width:330px;
+		margin-left: -200px;
+	}
+	
+	/* common background color to all */
+	.button, .button::before, .button::after {
+		background-color: #fff;
+	}
+
+	/* shared styles to make left and right lines */
+	.button::before, .button::after {
+		content: "";
+		position: absolute;
+		height: 90px;
+		width: 5px;
+		top: 0px;
+		
+	}
+	.button::before{
+		border-top: 5px solid #000;
+		border-left: 5px solid #000;
+		border-bottom: 5px solid #000;
+	}
+
+	.button::after{
+		border-top: 5px solid #000;
+		border-right: 5px solid #000;
+		border-bottom: 5px solid #000;
+	}
+
+	/* pull the left 'line' out to the left */
+	.button::before {
+		left: -10px;
+	}
+
+	/* pull the right 'line' out to the right */
+	.button::after {    
+		right: -10px;
+
+	}
+
+	/* Typed Styles */
+
+	.typed-cursor{
+		opacity: 1;
+		-webkit-animation: blink 0.7s infinite;
+		-moz-animation: blink 0.7s infinite;
+		animation: blink 0.7s infinite;
+	}
+	@keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-webkit-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
+	@-moz-keyframes blink{
+		0% { opacity:1; }
+		50% { opacity:0; }
+		100% { opacity:1; }
+	}
