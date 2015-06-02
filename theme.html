@@ -29,18 +29,18 @@
 	<link rel="alternate" type="application/rss+xml" href="{RSS}" />
 	<link rel="apple-touch-icon" href="{PortraitURL-128}" /> 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/typed.js"></script>
-	<script type="text/javascript" src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/scripts/jquery.cookie.js"></script>
-	<script type="text/javascript" src="scripts/script.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/motaheri/IsItDaisyDay/master/scripts/typed.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/motaheri/IsItDaisyDay/master/scripts/jquery.cookie.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/motaheri/IsItDaisyDay/master/scripts/script.js"></script>
 </head> 
 <body>
 <audio id="popAudio">
-    <source src="sounds/blop.mp3" type="audio/mpeg">
+    <source src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/sounds/blop.mp3" type="audio/mpeg">
 </audio>
 <div id="wrapper"> 
 	<div id="center">
-		<div id="question" ref="{Title}">
-			 Is It Daisy Day?
+		<div id="question">
+			 {Title}
 		</div>
 	</div>
 	<div id="outer">
@@ -50,7 +50,7 @@
 				<img src="https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/icons/hourglass.gif?raw=true"/>
 			</div>
 			<div id="message">
-				<a href="#">{block:Posts}{block:Text}{Title}{/block:Text}{/block:Posts}</a>
+				<span class='message-text'>{block:Posts}{block:Text}{Title}{/block:Text}{/block:Posts}</span>
 			</div>
 		</div> 
 	</div> 

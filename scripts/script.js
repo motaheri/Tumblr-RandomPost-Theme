@@ -40,7 +40,7 @@ $.fn.randomContent = function(contentArray){
 };
 
 function randomize(titleArray){
-	$('#message a').randomContent(titleArray);
+	$('#message span').randomContent(titleArray);
 }
 
 // http://jquery-howto.blogspot.com/2009/09/get-url-parameters-values-with-jquery.html
@@ -127,8 +127,8 @@ $(document).ready(function(){
 
 
 	function spectrum(titleArraySelection){
-		$("#message a").html('');
-		$("#message a").typed({
+		$("#message .message-text").html('');
+		$("#message .message-text").typed({
 			strings: titleArraySelection,
 			typeSpeed: 5,
 			backDelay: 1500,
@@ -146,14 +146,15 @@ $(document).ready(function(){
 	};
 
 	function afterType(){ 
-		$("#message a").css('display','inline');
+		$("#message .message-text").css('display','inline');
 		setTimeout(function() {
-			$("#message a").css('display','inline');
+			$("#message .message-text").css('display','inline');
 		}, .1);
 		randomImage();
 		//console.log("Callback"); 
 		$('html').click(function(){
 			randomImage();
+			$('html').css('cursor','pointer');
 			return false;
 		});
 	}

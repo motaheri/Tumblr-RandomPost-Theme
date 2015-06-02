@@ -93,6 +93,8 @@ iframe {
 	float:left;
 	margin-left: -190px;
 	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	cursor: hand;
 }
 /* common background color to all */
 .button, .button::before, .button::after {
