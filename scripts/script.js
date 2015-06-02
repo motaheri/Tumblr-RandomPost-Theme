@@ -5,7 +5,7 @@ ion.sound({
     ],
 
     // main config
-    path: "https://rawgit.com/motaheri/IsItDaisyDay/master/sounds/",
+    path: "https://cdn.rawgit.com/motaheri/IsItDaisyDay/master/sounds/",
     preload: true,
     multiplay: true,
     volume: 0.1
@@ -69,6 +69,9 @@ function getUrlVars(){
 
 var photoArray = [];
 function randomImage() {
+	  
+  // play sound
+  ion.sound.play("blop");
   var imageSizeH = 500 + Math.floor(Math.random() * 500);
   var imageSizeW = 500 + Math.floor(Math.random() * 500);
   var windowHeight = $(window).height() - imageSizeH;
@@ -86,10 +89,8 @@ function randomImage() {
   var appendImgHtml = '<div class="randImageContainer" style="height:' + imageSizeH + 'px; width:' + imageSizeW + 'px; top:' + imagePosY + 'px; left:' + imagePosX + 'px; background: url(' + randomPhoto + ')"/>';
   //$('#popAudio').prop("volume",0.1);
   //$('#popAudio')[0].play();
-  //$('#randImageHolder').append(appendImgHtml);
-  
-// play sound
-ion.sound.play("blop");
+  $('#randImageHolder').append(appendImgHtml);
+
 };
 
 // tumblr json retrieval written by Mohammad Taheri http://motaheri.com/
