@@ -82,7 +82,7 @@ iframe {
 }
 /* main button block */
 .button {
-	display:hidden;
+	display:none;
 	position: relative;
 	text-align: center;
 	padding: 0 20px;
