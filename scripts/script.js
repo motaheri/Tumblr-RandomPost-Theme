@@ -67,14 +67,14 @@ function getUrlVars(){
 	}
 }
 
+ var currentMousePos = { x: -1, y: -1 };
+ $(document).mousemove(function(event) {
+     currentMousePos.x = event.pageX;
+     currentMousePos.y = event.pageY;
+ });
+
 var photoArray = [];
 function randomImage() {
-
-    var currentMousePos = { x: -1, y: -1 };
-    $(document).mousemove(function(event) {
-        currentMousePos.x = event.pageX;
-        currentMousePos.y = event.pageY;
-    });
 
 
   // play sound
