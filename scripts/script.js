@@ -86,8 +86,8 @@ function randomImage() {
   //var imagePosY = Math.floor(Math.random() * windowHeight);
   //var imagePosX = Math.floor(Math.random() * windowHWidth);
   
-  var imagePosY = currentMousePos.y - imageSizeH / 2;
-  var imagePosX = currentMousePos.x - imageSizeW / 2;
+  var imagePosY = currentMousePos.y - (imageSizeW / 2);
+  var imagePosX = currentMousePos.x - (imageSizeH / 2);
 
   console.log(currentMousePos);
 
