@@ -83,12 +83,13 @@ function randomImage() {
   var imageSizeW = 500 + Math.floor(Math.random() * 500);
   var windowHeight = $(window).height() - imageSizeH;
   var windowHWidth = $(window).width() - imageSizeW;
-  var imagePosY = Math.floor(Math.random() * windowHeight);
-  var imagePosX = Math.floor(Math.random() * windowHWidth);
+  //var imagePosY = Math.floor(Math.random() * windowHeight);
+  //var imagePosX = Math.floor(Math.random() * windowHWidth);
   
   var imagePosY = currentMousePos.x;
   var imagePosX = currentMousePos.y;
 
+  console.log(currentMousePos);
 
 
   //$('#randImageHolder').css('top',imagePosY).css('left',imagePosX);
