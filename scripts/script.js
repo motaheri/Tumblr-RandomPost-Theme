@@ -241,8 +241,10 @@ $(document).ready(function(){
 		var timeAfterDay = (nowTime - anniversary) % yearLength;
 
 
-		if(timeAfterDay < dayLength * 1.5 || true){                
-			titleArraySelection = ["Happy Birthday Daisy!", "You are totally awesome! &#128147;"];
+		if(timeAfterDay < dayLength){                
+			titleArraySelection = ["Happy Birthday Daisy!", "You are totally awesome!", "Have a super Daisy day!!!"];
+		}else if(timeAfterDay > dayLength && timeAfterDay * 0.9 < dayLength * 2){
+			titleArraySelection = ["Hope your Birthday was awesonw Daisy!", "Just like you!"];
 		}
 
 
