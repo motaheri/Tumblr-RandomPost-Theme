@@ -69,7 +69,14 @@ function getUrlVars(){
 
 var photoArray = [];
 function randomImage() {
-	  
+
+    var currentMousePos = { x: -1, y: -1 };
+    $(document).mousemove(function(event) {
+        currentMousePos.x = event.pageX;
+        currentMousePos.y = event.pageY;
+    });
+
+
   // play sound
   ion.sound.play("blop");
   var imageSizeH = 500 + Math.floor(Math.random() * 500);
@@ -79,6 +86,11 @@ function randomImage() {
   var imagePosY = Math.floor(Math.random() * windowHeight);
   var imagePosX = Math.floor(Math.random() * windowHWidth);
   
+  var imagePosY = currentMousePos.x;
+  var imagePosX = currentMousePos.y;
+
+
+
   //$('#randImageHolder').css('top',imagePosY).css('left',imagePosX);
   //$('#randImageHolder').css('height',imageSizeH).css('width',imageSizeW);
   //console.log(photoArray);
