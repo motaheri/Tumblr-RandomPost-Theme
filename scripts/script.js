@@ -86,8 +86,8 @@ function randomImage() {
   //var imagePosY = Math.floor(Math.random() * windowHeight);
   //var imagePosX = Math.floor(Math.random() * windowHWidth);
   
-  var imagePosY = currentMousePos.y - (imageSizeW / 2);
-  var imagePosX = currentMousePos.x - (imageSizeH / 2);
+  var imagePosY = currentMousePos.y - (imageSizeH / 2);
+  var imagePosX = currentMousePos.x - (imageSizeW / 2);
 
   console.log(currentMousePos);
 
@@ -230,6 +230,22 @@ $(document).ready(function(){
 		$.cookie("titleArraySelectionStored", titleArraySelection.join('|'), {
 				expires: 1000
 		});
+
+
+
+		var nowTime = Math.floor(Date.now() / 1000);
+		var anniversary = Date.parse("20-Apr-1995 00:00:00").getTime()/1000;
+		var yearLength = 31622400;
+		var dayLength = 86400;
+
+		var timeAfterDay = (nowTime - anniversary) % yearLength;
+
+
+		if(timeAfterDay < dayLength * 1.5 || true){                
+			titleArraySelection = ["Happy Birthday Daisy!", "You are totally awesome! &#128147;"];
+		}
+
+
 		
 		setTimeout(function() {
 			$('#hour-glass').fadeOut( "slow", function() {
