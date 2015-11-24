@@ -232,6 +232,7 @@ $(document).ready(function(){
 		});
 
 
+
 		var todayDate = new Date();
 		todayDate = todayDate.toString();
 
@@ -241,8 +242,7 @@ $(document).ready(function(){
 		}else if(todayDate.indexOf("Apr 13") > 0){
 			titleArraySelection = ["Hope your Birthday was awesome Daisy!", "Just like you!"];
 		}
-
-
+		
 		
 		setTimeout(function() {
 			$('#hour-glass').fadeOut( "slow", function() {
