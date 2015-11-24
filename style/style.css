@@ -97,6 +97,7 @@ iframe {
 	font-family: 'Open Sans', sans-serif;
 	cursor: pointer;
 	cursor: hand;
+	z-index:1000;
 }
 /* common background color to all */
 .button, .button::before, .button::after {

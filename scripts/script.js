@@ -239,10 +239,10 @@ $(document).ready(function(){
 
 		if(todayDate.indexOf("Apr 12") > 0){                
 			titleArraySelection = ["Happy Birthday Daisy!", "You are totally awesome!", "Have a super Daisy day!!!"];
-		}else if(todayDate.indexOf("Apr 13") > 0){
+		}else if(todayDate.indexOf("Nov 24") > 0){
 			titleArraySelection = ["Hope your Birthday was awesome Daisy!", "Just like you!"];
 		}
-		
+
 		
 		setTimeout(function() {
 			$('#hour-glass').fadeOut( "slow", function() {
