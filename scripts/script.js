@@ -232,18 +232,13 @@ $(document).ready(function(){
 		});
 
 
-
-		var nowTime = Math.floor(Date.now() / 1000);
-		var anniversary = Date.parse("20-Apr-1995 00:00:00").getTime()/1000;
-		var yearLength = 31622400;
-		var dayLength = 86400;
-
-		var timeAfterDay = (nowTime - anniversary) % yearLength;
+		var todayDate = new Date();
+		todayDate = todayDate.toString();
 
 
-		if(timeAfterDay < dayLength){                
+		if(todayDate.indexOf("Apr 12") > 0){                
 			titleArraySelection = ["Happy Birthday Daisy!", "You are totally awesome!", "Have a super Daisy day!!!"];
-		}else if(timeAfterDay > dayLength * 0.9 && timeAfterDay < dayLength * 2){
+		}else if(todayDate.indexOf("Apr 13") > 0){
 			titleArraySelection = ["Hope your Birthday was awesome Daisy!", "Just like you!"];
 		}
 
